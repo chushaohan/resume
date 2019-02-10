@@ -1,0 +1,76 @@
+@img: '../img/';
+.a {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+.hide {
+  display: none;
+}
+.circle {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: rgb(222, 82, 91);
+  top: 50%;
+  left: 50%;
+  margin-left: -3rem;
+  margin-top: -4.7rem;
+  opacity: 0;
+}
+.t {
+  width: 1.3rem;
+  height: 4rem;
+  padding: 0.5rem 0.2rem;
+  box-sizing: border-box;
+  position: absolute;
+  right: -1.3rem;
+  top: 0;
+  color: #fff;
+  font-size: 0.5rem;
+  text-align: center;
+  background: url('@{img}red.png') no-repeat;
+  background-size: cover;
+  .ind {
+    position: absolute;
+    top: -4rem;
+    right: 0.6rem;
+    width: 0.3rem;
+  }
+}
+.title {
+  background: url('@{img}red2.png');
+  background-size: cover;
+  width: 6rem;
+  height: 1rem;
+  position: relative;
+  top: 6.8rem;
+  left: 50%;
+  margin-left: -3rem;
+  opacity: 0;
+  .four_ind {
+    color: #fff;
+    font-size: 0.6rem;
+    line-height: 1rem;
+    text-align: center;
+    transform: scale(0.1);
+  }
+  .four_hide {
+    position: absolute;
+    width: 0.4rem;
+    height: 1rem;
+    top: 0;
+    left: 50%;
+    margin-left: -0.2rem;
+    background-color: rgb(194, 54, 63);
+  }
+}
