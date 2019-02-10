@@ -13,18 +13,15 @@
 
 <body>
   <!-- 按键 -->
-  <section class="icon">
-    <div class="mic">
-      <div class="music"></div>
-      <div class="musicOff"></div>
-    </div>
-
-    <audio src="./audio/Dream It Possible.mp3" id="bell" preload="none" loop></audio>
-    <div class="up"></div>
-  </section>
+  <div class="mic">
+    <div class="music"></div>
+    <div class="musicOff"></div>
+  </div>
+  <audio src="./audio/Dream It Possible.mp3" id="bell" preload="none" loop></audio>
+  <div class="up"></div>
 
   <!-- loading页面 -->
-  <section class="loadingBox">
+  <section class="loadingBox  hide">
     <div class="progress">
       <img src="./img/loading.jpg" alt="" />
     </div>
@@ -33,15 +30,18 @@
     </div>
   </section>
   <!-- 第一页 -->
-  <section class="page_one">
-    <div class="one_circle"></div>
-    <div class="one_user_j"></div>
-    <div class="one_user_e"></div>
-    <div class="one_bottom"></div>
-    <div class="one_mid">初少涵</div>
+  <section class="page_one hide">
+    <div class="one_circle">
+      <div class="one_user_j"></div>
+      <div class="one_user_e"></div>
+    </div>
+    <div class="one_bottom">
+      <div class="one_mid">初少涵</div>
+    </div>
+
   </section>
   <!-- 第二页 -->
-  <section class="page_two">
+  <section class="page_two hide">
     <div class="two_left">
       <div class="mask"></div>
     </div>
@@ -69,13 +69,15 @@
     </div>
   </section>
   <!-- 第三页 -->
-  <section class="page_three">
-    <div class="three_circle"></div>
-    <div class="job">求职意向</div>
-    <div class="post">XXXX</div>
+  <section class="page_three hide">
+    <div class="three_circle">
+      <div class="job">求职意向</div>
+      <div class="post">XXXX</div>
+    </div>
+
   </section>
   <!-- 第四页 -->
-  <section class="page_four">
+  <section class="page_four hide">
     <div class="four_up"></div>
     <div class="four_bg"></div>
     <div class="title">
@@ -89,11 +91,11 @@
     </div>
   </section>
   <!-- 第五页 -->
-  <section class="page_five">
+  <section class="page_five hide">
     <div class="top_title">
       <span class="ind">工作经历</span>
     </div>
-    <div class="five_left">
+    <!-- <div class="five_left">
       <div class="five_left_line"></div>
       <ul class="five_left_circle">
         <li></li>
@@ -101,14 +103,14 @@
         <li></li>
         <li></li>
       </ul>
-    </div>
+    </div> -->
     <ul class="five_desc">
       <li>
         <div class="five_time">
           2014.09-2015.01
         </div>
         <div class="five_content">
-          天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。
+          天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。
         </div>
       </li>
       <li>
@@ -116,7 +118,7 @@
           2014.09-2015.01
         </div>
         <div class="five_content">
-          天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。
+          天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。
         </div>
       </li>
       <li>
@@ -124,7 +126,7 @@
           2014.09-2015.01
         </div>
         <div class="five_content">
-          天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。有情人终成扣肉。
+          天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。有情人终成扣肉。
         </div>
       </li>
       <li>
@@ -132,7 +134,7 @@
           2014.09-2015.01
         </div>
         <div class="five_content">
-          天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。闻鸡起筷。
+          天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。 天有不测之风云，人有霎时之蛋塔。闻鸡起筷。
         </div>
       </li>
     </ul>
@@ -146,7 +148,7 @@
     </div>
   </section>
   <!-- 第六页 -->
-  <section class="page_six">
+  <section class="page_six hide">
     <div class="six_bg"></div>
     <div class="six_bottom">
       <ul>

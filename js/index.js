@@ -53,8 +53,8 @@ function loading() {
     }
   }
 }
-loading()
-
+// loading()
+// 音乐按键
 $mic.tap(function () {
   music()
 })
@@ -101,7 +101,7 @@ function pageOne() {
   let timer1 = setTimeout(() => {
     clearTimeout(timer1);
     $userJ.css({
-      transform: 'translateY(2rem)',
+      transform: 'translateY(3rem)',
       transition: 'all 1s',
       opacity: 1
     })
@@ -136,9 +136,7 @@ function pageTwo() {
   let $twoLeft = $pageTwo.children('.two_left'),
     $twoHead = $pageTwo.children('.two_head'),
     $pic = $pageTwo.find('.pic'),
-    $picLi = $pic.children('li'),
-    $desc = $pageTwo.find('.desc'),
-    $descLi = $desc.children('li');
+    $desc = $pageTwo.find('.desc');
   topTitle();
   twoLeft();
   twoHead();
@@ -149,6 +147,7 @@ function pageTwo() {
       clearTimeout(timer)
       $twoLeft.css({
         transform: 'translateX(2.9rem)',
+        opacity: '1',
         transition: 'all 1.5s',
       })
     }, 1000);
@@ -166,20 +165,20 @@ function pageTwo() {
   }
 
   function Ul() {
-    for (let i = 0; i < $picLi.length; i++) {
-      let timer = setTimeout(() => {
-        clearTimeout(timer)
-        $picLi.css({
-          transform: 'translateX(1rem)',
-          transition: 'all 2s',
-          opacity: 1
-        })
-        $descLi.css({
-          transform: 'translateX(-5rem)',
-          opacity: 1
-        })
-      }, 1000);
-    }
+
+    let timer = setTimeout(() => {
+      clearTimeout(timer)
+      $pic.css({
+        transform: 'translateX(1rem)',
+        transition: 'all 2s',
+        opacity: 1
+      })
+      $desc.css({
+        transform: 'translateX(-5rem)',
+        transition: 'all 2s',
+        opacity: 1
+      })
+    }, 1000);
   }
   $up.tap(function () {
     $pageTwo.css({
@@ -192,8 +191,8 @@ function pageTwo() {
 // 第三页
 function pageThree() {
   $threeCircle = $pageThree.children('.three_circle'),
-    $job = $pageThree.children('.job'),
-    $post = $pageThree.children('.post')
+    $job = $pageThree.find('.job'),
+    $post = $pageThree.find('.post')
   $threeCircle.css({
     transform: 'scale(1)',
     transition: 'all 2s',
@@ -257,26 +256,26 @@ function pageFour() {
 }
 // 第五页
 function pageFive() {
-  let $fiveLeftLine = $('.five_left_line'),
-    $fiveLeftCircle = $('.five_left_circle'),
-    $fiveDesc = $('.five_desc');
-  $fiveLeftLine.css({
-    transform: 'translateY(12rem)',
-    transition: 'all 2s'
-  })
+  //  $fiveLeftLine = $('.five_left_line'),
+  // $fiveLeftCircle = $('.five_left_circle'),
+  let $fiveDesc = $('.five_desc');
+  // $fiveLeftLine.css({
+  //   transform: 'translateY(12rem)',
+  //   transition: 'all 2s'
+  // })
   topTitle();
-  fiveLeftCircle();
+  // fiveLeftCircle();
   fiveDesc()
   bottomBg()
 
-  function fiveLeftCircle() {
-    let timer = setTimeout(() => {
-      $fiveLeftCircle.css({
-        opacity: 1,
-        transition: 'all 2s'
-      })
-    }, 2000);
-  }
+  // function fiveLeftCircle() {
+  //   let timer = setTimeout(() => {
+  //     $fiveLeftCircle.css({
+  //       opacity: 1,
+  //       transition: 'all 2s'
+  //     })
+  //   }, 2000);
+  // }
 
   function fiveDesc() {
     let timer = setTimeout(() => {
@@ -284,7 +283,7 @@ function pageFive() {
         opacity: 1,
         transition: 'all 2s'
       })
-    }, 2500);
+    }, 1000);
   }
   $up.tap(function () {
     $pageFive.css({
@@ -294,7 +293,7 @@ function pageFive() {
     pageSix()
   })
 }
-// 第六页
+// 第六页 
 function pageSix() {
   let $sixBg = $pageSix.children('.six_bg'),
     $sixBottom = $pageSix.children('.six_bottom'),
@@ -330,9 +329,12 @@ function pageSix() {
   })
 }
 // 第七页
+pageSeven()
+
 function pageSeven() {
   let $sevenCircle = $pageSeven.children('.seven_circle'),
     $sevenTab = $pageSeven.children('.seven_tab'),
+    $sevenS = $sevenTab.children('span'),
     $sevenDesc = $pageSeven.children('.seven_desc'),
     $sevenHand = $pageSeven.children('.seven_hand');
   $up.css({
@@ -340,6 +342,10 @@ function pageSeven() {
   })
   $sevenTab.css({
     transform: 'scale(1)',
+    opacity: 1,
+    transition: 'all 2s'
+  })
+  $sevenS.css({
     opacity: 1,
     transition: 'all 2s'
   })

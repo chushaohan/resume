@@ -4,47 +4,45 @@ html,
 body {
   .a;
 }
-.icon {
-  z-index: 10;
-  .mic {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    .music {
-      width: 1rem;
-      height: 1rem;
-      background: url('@{img}musicon.png') no-repeat;
-      background-size: cover;
-    }
-    .musicOff {
-      width: 1rem;
-      height: 1rem;
-      background: url('@{img}musicoff.png') no-repeat;
-      background-size: cover;
-      display: none;
-    }
-  }
 
-  .up {
-    position: absolute;
-    top: 15rem;
-    height: 0.5rem;
-    width: 0.8rem;
-    left: 50%;
-    margin-left: -0.35rem;
-    animation: move 1s infinite;
-    background: url('@{img}up.png') no-repeat;
+.mic {
+  z-index: 10;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  .music {
+    width: 1rem;
+    height: 1rem;
+    background: url('@{img}musicon.png') no-repeat;
     background-size: cover;
-    @keyframes move {
-      0% {
-        top: 15rem;
-      }
-      50% {
-        top: 14.7rem;
-      }
-      100% {
-        top: 15rem;
-      }
+  }
+  .musicOff {
+    width: 1rem;
+    height: 1rem;
+    background: url('@{img}musicoff.png') no-repeat;
+    background-size: cover;
+    display: none;
+  }
+}
+.up {
+  z-index: 10;
+  position: absolute;
+  height: 0.5rem;
+  width: 0.8rem;
+  left: 50%;
+  margin-left: -0.4rem;
+  animation: move 1s infinite;
+  background: url('@{img}up.png') no-repeat;
+  background-size: cover;
+  @keyframes move {
+    0% {
+      bottom: 0.9rem;
+    }
+    50% {
+      bottom: 0.6rem;
+    }
+    100% {
+      bottom: 0.9rem;
     }
   }
 }
@@ -60,7 +58,7 @@ body {
     border-radius: 50%;
     left: 50%;
     margin-left: -2.7rem;
-    margin-top: 3rem;
+    margin-top: 30%;
     img {
       position: absolute;
       width: 5rem;
@@ -76,7 +74,7 @@ body {
     position: absolute;
     width: 8rem;
     height: 0.4rem;
-    bottom: 3rem;
+    bottom: 20%;
     left: 50%;
     margin-left: -4rem;
     background: #fff;
@@ -111,51 +109,57 @@ body {
   background-color: rgb(36, 62, 111);
   .one_circle {
     .circle;
-  }
-  .one_user_j {
-    position: absolute;
-    height: 5.5rem;
-    width: 2.5rem;
-    left: 50%;
-    top: 1.4rem;
-    margin-left: -1.25rem;
-    opacity: 0;
-    background: url('@{img}page_user1.png') no-repeat;
-    background-size: cover;
-  }
-  .one_user_e {
-    position: absolute;
-    width: 4rem;
-    height: 0.7rem;
-    left: 50%;
-    margin-top: 5.8rem;
-    margin-left: -4rem;
-    opacity: 0;
-    background: url('@{img}page_user2.png') no-repeat;
-    background-size: cover;
+    position: relative;
+    .one_user_j {
+      position: absolute;
+      height: 5.5rem;
+      width: 2.5rem;
+      left: 50%;
+      top: 50%;
+      margin-left: -1.25rem;
+      opacity: 0;
+      margin-top: -5.75rem;
+      background: url('@{img}page_user1.png') no-repeat;
+      background-size: cover;
+    }
+    .one_user_e {
+      position: absolute;
+      width: 4rem;
+      height: 0.7rem;
+      left: 50%;
+      margin-left: -4rem;
+      top: 50%;
+      opacity: 0;
+      margin-top: -0.35rem;
+      background: url('@{img}page_user2.png') no-repeat;
+      background-size: cover;
+    }
   }
   .one_bottom {
     position: absolute;
-    height: 3.1rem;
-    bottom: 5.2rem;
+    width: 2.32rem;
+    height: 3.5rem;
+    bottom: 30%;
     left: 50%;
     margin-left: -1.16rem;
-    padding: 0 1.1rem;
     border-left: 0.06rem solid rgb(230, 225, 225);
     border-right: 0.06rem solid rgb(230, 225, 225);
     opacity: 0;
-  }
-  .one_mid {
-    position: absolute;
-    bottom: 5.2rem;
-    left: 50%;
-    margin-left: -0.5rem;
-    width: 1rem;
-    font-size: 0.8rem;
-    color: rgb(230, 225, 225);
-    font-weight: lighter;
-    text-align: center;
-    opacity: 0;
+    .one_mid {
+      position: absolute;
+      height: 100%;
+      width: 1rem;
+      left: 50%;
+      margin-left: -0.5rem;
+      top: 50%;
+      margin-top: -4.75rem;
+      line-height: 1.2rem;
+      font-size: 0.8rem;
+      color: rgb(230, 225, 225);
+      font-weight: lighter;
+      text-align: center;
+      opacity: 0;
+    }
   }
 }
 // 第二页
@@ -165,9 +169,10 @@ body {
     position: absolute;
     left: -2.9rem;
     height: 100%;
-    width: 2.9rem;
+    width: 25%;
     background: url('@{img}left.jpg') no-repeat;
     background-size: cover;
+    opacity: 0;
     .mask {
       background-color: rgba(255, 255, 255, 0.3);
       .a;
@@ -179,7 +184,7 @@ body {
     border-radius: 50%;
     position: absolute;
     left: 1.4rem;
-    top: 0.9rem;
+    top: 7%;
     background: url('@{img}head.jpg') no-repeat;
     background-size: cover;
     opacity: 0;
@@ -188,17 +193,17 @@ body {
     .t;
   }
   .msg {
-    position: relative;
-    top: 15.8rem;
+    position: absolute;
+    bottom: 5%;
     .pic {
       position: absolute;
       bottom: 1.2rem;
+      opacity: 0;
       li {
         left: 2rem;
         width: 1rem;
         height: 1rem;
         margin: 0.55rem 0.35rem;
-        opacity: 0;
         img {
           .a;
         }
@@ -207,6 +212,7 @@ body {
     .desc {
       position: absolute;
       bottom: 1.2rem;
+      opacity: 0;
       li {
         left: 10rem;
         color: rgb(36, 62, 111);
@@ -215,7 +221,6 @@ body {
         line-height: 1rem;
         font-size: 0.5rem;
         font-weight: initial;
-        opacity: 0;
       }
     }
   }
@@ -228,31 +233,34 @@ body {
   .three_circle {
     .circle;
     opacity: 1;
-    top: 55%;
+    top: 25%;
     transform: scale(0.1);
-  }
-  .job {
-    width: 5.4rem;
-    height: 1.7rem;
-    border-bottom: 0.03rem solid #fff;
-    color: #fff;
-    font-size: 0.9rem;
-    text-align: center;
-    position: absolute;
-    top: 5.7rem;
-    left: 50%;
-    margin-left: -2.6rem;
-    opacity: 0;
-    transform: scale(0.1);
-  }
-  .post {
-    color: #fff;
-    font-size: 0.5rem;
-    position: absolute;
-    top: 8rem;
-    margin-left: 4.2rem;
-    opacity: 0;
-    transform: scale(0.1);
+    .job {
+      width: 5.4rem;
+      height: 1.7rem;
+      border-bottom: 0.03rem solid #fff;
+      color: #fff;
+      font-size: 0.9rem;
+      text-align: center;
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      margin-left: -2.6rem;
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    .post {
+      position: absolute;
+      width: 5.4rem;
+      bottom: 25%;
+      left: 50%;
+      margin-left: -2.7rem;
+      color: #fff;
+      font-size: 0.5rem;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.1);
+    }
   }
 }
 // 第四页
@@ -284,15 +292,14 @@ body {
     .title;
   }
   .four_desc {
-    width: 8rem;
-    height: 7rem;
-    bottom: -6.8rem;
+    width: 80%;
+    bottom: -25%;
     position: absolute;
-    left: 1rem;
+    left: 10%;
     text-align: left;
     font-size: 0.35rem;
     font-weight: 100;
-    line-height: 0.5rem;
+    line-height: 0.6rem;
   }
 }
 // 第五页
@@ -306,27 +313,28 @@ body {
     position: relative;
     top: 0.9rem;
     left: 0.7rem;
+    height: 80%;
+    float: left;
     .five_left_line {
       position: absolute;
       background-color: rgb(222, 82, 91);
       width: 0.07rem;
-      height: 11rem;
+      height: 95%;
       top: -12rem;
     }
     .five_left_circle {
       opacity: 0;
-      position: absolute;
+      position: relative;
       top: 0.1rem;
       left: -0.17rem;
+      height: 80%;
       li {
+        position: absolute;
         height: 0.45rem;
         width: 0.45rem;
         background-color: rgb(222, 82, 91);
         border-radius: 50%;
-        margin-bottom: 2.7rem;
-        &:nth-child(4) {
-          margin-bottom: 0;
-        }
+        margin-bottom: 3rem;
       }
     }
   }
@@ -335,38 +343,42 @@ body {
     top: 0.9rem;
     left: 1.2rem;
     opacity: 0;
+    width: 75%;
+    height: 80%;
     li {
       position: absolute;
+      overflow: hidden;
       .five_time {
         color: #fff;
         font-size: 0.5rem;
         font-weight: 200;
+        margin-top: 0.5rem;
       }
       .five_content {
         color: rgb(130, 195, 233);
-        font-size: 0.3rem;
+        font-size: 0.33rem;
         font-weight: 100;
         margin-top: 0.2rem;
-        width: 6.5rem;
+        width: 93%;
       }
       &:nth-child(1) {
         top: 0;
       }
       &:nth-child(2) {
-        top: 3.1rem;
+        top: 21%;
       }
       &:nth-child(3) {
-        top: 6.3rem;
+        top: 42%;
       }
       &:nth-child(4) {
-        top: 9.4rem;
+        top: 63%;
       }
     }
   }
   .five_bg {
-    position: relative;
+    position: absolute;
     left: 0.7rem;
-    top: 16rem;
+    bottom: -3.2rem;
     width: 9rem;
     height: 2.5rem;
     opacity: 0;
@@ -444,7 +456,7 @@ body {
   }
   .title {
     .title;
-    top: -16.3rem;
+    top: -102%;
   }
   .six_bottom {
     .a;
@@ -460,10 +472,26 @@ body {
       position: absolute;
       top: 1.4rem;
       left: 1.2rem;
+      height: 10%;
       li {
         height: 1.3rem;
         width: 8rem;
         padding-bottom: 0.5rem;
+        &:nth-child(1) {
+          top: 0;
+        }
+        &:nth-child(2) {
+          top: 21%;
+        }
+        &:nth-child(3) {
+          top: 42%;
+        }
+        &:nth-child(4) {
+          top: 63%;
+        }
+        &:nth-child(5) {
+          top: 84%;
+        }
         .six_left {
           opacity: 0;
           transform: scale(0.1);
@@ -623,7 +651,7 @@ body {
     width: 5.3rem;
     height: 3.6rem;
     position: relative;
-    top: 0.6rem;
+    top: 5%;
     left: 0.2rem;
     background: url('@{img}tab.png');
     background-size: cover;
@@ -634,13 +662,14 @@ body {
       left: 1.8rem;
       top: 1.7rem;
       transform: rotate(-25deg);
+      opacity: 0;
     }
   }
   .seven_desc {
     opacity: 0;
     position: absolute;
     width: 3.6rem;
-    top: 2.5rem;
+    top: 15%;
     left: 50%;
     margin-left: -1.8rem;
     color: #fff;
@@ -666,7 +695,7 @@ body {
     border-radius: 50%;
     border: 0.02rem dashed #fff;
     position: absolute;
-    top: 2rem;
+    top: 15%;
     left: 50%;
     margin-left: -4.6rem;
   }

@@ -19,10 +19,9 @@
   height: 6rem;
   border-radius: 50%;
   background-color: #de525b;
-  top: 50%;
+  top: 20%;
   left: 50%;
   margin-left: -3rem;
-  margin-top: -4.7rem;
   opacity: 0;
 }
 .t {
@@ -51,7 +50,7 @@
   width: 6rem;
   height: 1rem;
   position: relative;
-  top: 6.8rem;
+  top: 35%;
   left: 50%;
   margin-left: -3rem;
   opacity: 0;
@@ -79,47 +78,45 @@ body {
   overflow: hidden;
   position: relative;
 }
-.icon {
+.mic {
   z-index: 10;
-}
-.icon .mic {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
 }
-.icon .mic .music {
+.mic .music {
   width: 1rem;
   height: 1rem;
   background: url('../img/musicon.png') no-repeat;
   background-size: cover;
 }
-.icon .mic .musicOff {
+.mic .musicOff {
   width: 1rem;
   height: 1rem;
   background: url('../img/musicoff.png') no-repeat;
   background-size: cover;
   display: none;
 }
-.icon .up {
+.up {
+  z-index: 10;
   position: absolute;
-  top: 15rem;
   height: 0.5rem;
   width: 0.8rem;
   left: 50%;
-  margin-left: -0.35rem;
+  margin-left: -0.4rem;
   animation: move 1s infinite;
   background: url('../img/up.png') no-repeat;
   background-size: cover;
 }
 @keyframes move {
   0% {
-    top: 15rem;
+    bottom: 0.9rem;
   }
   50% {
-    top: 14.7rem;
+    bottom: 0.6rem;
   }
   100% {
-    top: 15rem;
+    bottom: 0.9rem;
   }
 }
 .loadingBox {
@@ -137,7 +134,7 @@ body {
   border-radius: 50%;
   left: 50%;
   margin-left: -2.7rem;
-  margin-top: 3rem;
+  margin-top: 30%;
 }
 .loadingBox .progress img {
   position: absolute;
@@ -153,7 +150,7 @@ body {
   position: absolute;
   width: 8rem;
   height: 0.4rem;
-  bottom: 3rem;
+  bottom: 20%;
   left: 50%;
   margin-left: -4rem;
   background: #fff;
@@ -180,51 +177,56 @@ body {
   height: 6rem;
   border-radius: 50%;
   background-color: #de525b;
-  top: 50%;
+  top: 20%;
   left: 50%;
   margin-left: -3rem;
-  margin-top: -4.7rem;
   opacity: 0;
+  position: relative;
 }
-.page_one .one_user_j {
+.page_one .one_circle .one_user_j {
   position: absolute;
   height: 5.5rem;
   width: 2.5rem;
   left: 50%;
-  top: 1.4rem;
+  top: 50%;
   margin-left: -1.25rem;
   opacity: 0;
+  margin-top: -5.75rem;
   background: url('../img/page_user1.png') no-repeat;
   background-size: cover;
 }
-.page_one .one_user_e {
+.page_one .one_circle .one_user_e {
   position: absolute;
   width: 4rem;
   height: 0.7rem;
   left: 50%;
-  margin-top: 5.8rem;
   margin-left: -4rem;
+  top: 50%;
   opacity: 0;
+  margin-top: -0.35rem;
   background: url('../img/page_user2.png') no-repeat;
   background-size: cover;
 }
 .page_one .one_bottom {
   position: absolute;
-  height: 3.1rem;
-  bottom: 5.2rem;
+  width: 2.32rem;
+  height: 3.5rem;
+  bottom: 30%;
   left: 50%;
   margin-left: -1.16rem;
-  padding: 0 1.1rem;
   border-left: 0.06rem solid #e6e1e1;
   border-right: 0.06rem solid #e6e1e1;
   opacity: 0;
 }
-.page_one .one_mid {
+.page_one .one_bottom .one_mid {
   position: absolute;
-  bottom: 5.2rem;
+  height: 100%;
+  width: 1rem;
   left: 50%;
   margin-left: -0.5rem;
-  width: 1rem;
+  top: 50%;
+  margin-top: -4.75rem;
+  line-height: 1.2rem;
   font-size: 0.8rem;
   color: #e6e1e1;
   font-weight: lighter;
@@ -241,9 +243,10 @@ body {
   position: absolute;
   left: -2.9rem;
   height: 100%;
-  width: 2.9rem;
+  width: 25%;
   background: url('../img/left.jpg') no-repeat;
   background-size: cover;
+  opacity: 0;
 }
 .page_two .two_left .mask {
   background-color: rgba(255, 255, 255, 0.3);
@@ -258,7 +261,7 @@ body {
   border-radius: 50%;
   position: absolute;
   left: 1.4rem;
-  top: 0.9rem;
+  top: 7%;
   background: url('../img/head.jpg') no-repeat;
   background-size: cover;
   opacity: 0;
@@ -284,19 +287,19 @@ body {
   width: 0.3rem;
 }
 .page_two .msg {
-  position: relative;
-  top: 15.8rem;
+  position: absolute;
+  bottom: 5%;
 }
 .page_two .msg .pic {
   position: absolute;
   bottom: 1.2rem;
+  opacity: 0;
 }
 .page_two .msg .pic li {
   left: 2rem;
   width: 1rem;
   height: 1rem;
   margin: 0.55rem 0.35rem;
-  opacity: 0;
 }
 .page_two .msg .pic li img {
   width: 100%;
@@ -307,6 +310,7 @@ body {
 .page_two .msg .desc {
   position: absolute;
   bottom: 1.2rem;
+  opacity: 0;
 }
 .page_two .msg .desc li {
   left: 10rem;
@@ -316,7 +320,6 @@ body {
   line-height: 1rem;
   font-size: 0.5rem;
   font-weight: initial;
-  opacity: 0;
 }
 .page_three {
   width: 100%;
@@ -332,16 +335,15 @@ body {
   height: 6rem;
   border-radius: 50%;
   background-color: #de525b;
-  top: 50%;
+  top: 20%;
   left: 50%;
   margin-left: -3rem;
-  margin-top: -4.7rem;
   opacity: 0;
   opacity: 1;
-  top: 55%;
+  top: 25%;
   transform: scale(0.1);
 }
-.page_three .job {
+.page_three .three_circle .job {
   width: 5.4rem;
   height: 1.7rem;
   border-bottom: 0.03rem solid #fff;
@@ -349,18 +351,21 @@ body {
   font-size: 0.9rem;
   text-align: center;
   position: absolute;
-  top: 5.7rem;
+  top: 25%;
   left: 50%;
   margin-left: -2.6rem;
   opacity: 0;
   transform: scale(0.1);
 }
-.page_three .post {
+.page_three .three_circle .post {
+  position: absolute;
+  width: 5.4rem;
+  bottom: 25%;
+  left: 50%;
+  margin-left: -2.7rem;
   color: #fff;
   font-size: 0.5rem;
-  position: absolute;
-  top: 8rem;
-  margin-left: 4.2rem;
+  text-align: center;
   opacity: 0;
   transform: scale(0.1);
 }
@@ -398,7 +403,7 @@ body {
   width: 6rem;
   height: 1rem;
   position: relative;
-  top: 6.8rem;
+  top: 35%;
   left: 50%;
   margin-left: -3rem;
   opacity: 0;
@@ -420,15 +425,14 @@ body {
   background-color: #c2363f;
 }
 .page_four .four_desc {
-  width: 8rem;
-  height: 7rem;
-  bottom: -6.8rem;
+  width: 80%;
+  bottom: -25%;
   position: absolute;
-  left: 1rem;
+  left: 10%;
   text-align: left;
   font-size: 0.35rem;
   font-weight: 100;
-  line-height: 0.5rem;
+  line-height: 0.6rem;
 }
 .page_five {
   width: 100%;
@@ -461,67 +465,72 @@ body {
   position: relative;
   top: 0.9rem;
   left: 0.7rem;
+  height: 80%;
+  float: left;
 }
 .page_five .five_left .five_left_line {
   position: absolute;
   background-color: #de525b;
   width: 0.07rem;
-  height: 11rem;
+  height: 95%;
   top: -12rem;
 }
 .page_five .five_left .five_left_circle {
   opacity: 0;
-  position: absolute;
+  position: relative;
   top: 0.1rem;
   left: -0.17rem;
+  height: 80%;
 }
 .page_five .five_left .five_left_circle li {
+  position: absolute;
   height: 0.45rem;
   width: 0.45rem;
   background-color: #de525b;
   border-radius: 50%;
-  margin-bottom: 2.7rem;
-}
-.page_five .five_left .five_left_circle li:nth-child(4) {
-  margin-bottom: 0;
+  margin-bottom: 3rem;
 }
 .page_five .five_desc {
   position: relative;
   top: 0.9rem;
   left: 1.2rem;
   opacity: 0;
+  width: 75%;
+  height: 80%;
 }
 .page_five .five_desc li {
   position: absolute;
+  overflow: hidden;
 }
 .page_five .five_desc li .five_time {
   color: #fff;
   font-size: 0.5rem;
   font-weight: 200;
+  margin-top: 0.5rem;
 }
 .page_five .five_desc li .five_content {
   color: #82c3e9;
-  font-size: 0.3rem;
+  font-size: 0.33rem;
   font-weight: 100;
   margin-top: 0.2rem;
-  width: 6.5rem;
+  width: 93%;
 }
 .page_five .five_desc li:nth-child(1) {
   top: 0;
 }
 .page_five .five_desc li:nth-child(2) {
-  top: 3.1rem;
+  top: 21%;
 }
 .page_five .five_desc li:nth-child(3) {
-  top: 6.3rem;
+  top: 42%;
 }
 .page_five .five_desc li:nth-child(4) {
-  top: 9.4rem;
+  top: 63%;
 }
 .page_five .five_bg {
-  position: relative;
+  position: absolute;
   left: 0.7rem;
-  top: 16rem;
+  bottom: -3.2rem;
   width: 9rem;
   height: 2.5rem;
   opacity: 0;
@@ -604,11 +613,11 @@ body {
   width: 6rem;
   height: 1rem;
   position: relative;
-  top: 6.8rem;
+  top: 35%;
   left: 50%;
   margin-left: -3rem;
   opacity: 0;
-  top: -16.3rem;
+  top: -102%;
 }
 .page_six .title .four_ind {
   color: #fff;
@@ -644,11 +653,27 @@ body {
   position: absolute;
   top: 1.4rem;
   left: 1.2rem;
+  height: 10%;
 }
 .page_six .six_bottom ul li {
   height: 1.3rem;
   width: 8rem;
   padding-bottom: 0.5rem;
+}
+.page_six .six_bottom ul li:nth-child(1) {
+  top: 0;
+}
+.page_six .six_bottom ul li:nth-child(2) {
+  top: 21%;
+}
+.page_six .six_bottom ul li:nth-child(3) {
+  top: 42%;
+}
+.page_six .six_bottom ul li:nth-child(4) {
+  top: 63%;
+}
+.page_six .six_bottom ul li:nth-child(5) {
+  top: 84%;
 }
 .page_six .six_bottom ul li .six_left {
   opacity: 0;
@@ -788,7 +813,7 @@ body {
   width: 5.3rem;
   height: 3.6rem;
   position: relative;
-  top: 0.6rem;
+  top: 5%;
   left: 0.2rem;
   background: url('../img/tab.png');
   background-size: cover;
@@ -800,12 +825,13 @@ body {
   left: 1.8rem;
   top: 1.7rem;
   transform: rotate(-25deg);
+  opacity: 0;
 }
 .page_seven .seven_desc {
   opacity: 0;
   position: absolute;
   width: 3.6rem;
-  top: 2.5rem;
+  top: 15%;
   left: 50%;
   margin-left: -1.8rem;
   color: #fff;
@@ -831,7 +857,7 @@ body {
   border-radius: 50%;
   border: 0.02rem dashed #fff;
   position: absolute;
-  top: 2rem;
+  top: 15%;
   left: 50%;
   margin-left: -4.6rem;
 }
