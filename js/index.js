@@ -17,7 +17,7 @@ let $up = $('.up'),
   $music = $('.music'),
   $musicOff = $('.musicOff')
 
-// 加载
+// 加载页面
 function loading() {
   let $progressBar = $('.progressBar'),
     $loadingBox = $('.loadingBox');
