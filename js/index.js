@@ -53,7 +53,7 @@ function loading() {
     }
   }
 }
-// loading()
+loading()
 // 音乐按键
 $mic.tap(function () {
   music()
@@ -329,8 +329,6 @@ function pageSix() {
   })
 }
 // 第七页
-pageSeven()
-
 function pageSeven() {
   let $sevenCircle = $pageSeven.children('.seven_circle'),
     $sevenTab = $pageSeven.children('.seven_tab'),
