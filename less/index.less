@@ -5,17 +5,20 @@ body {
   .a;
 }
 
+// 按键音乐
 .mic {
   z-index: 10;
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+
   .music {
     width: 1rem;
     height: 1rem;
     background: url('@{img}musicon.png') no-repeat;
     background-size: cover;
   }
+
   .musicOff {
     width: 1rem;
     height: 1rem;
@@ -24,6 +27,7 @@ body {
     display: none;
   }
 }
+
 .up {
   z-index: 10;
   position: absolute;
@@ -34,42 +38,47 @@ body {
   animation: move 1s infinite;
   background: url('@{img}up.png') no-repeat;
   background-size: cover;
+
   @keyframes move {
     0% {
       bottom: 0.9rem;
     }
+
     50% {
       bottom: 0.6rem;
     }
+
     100% {
       bottom: 0.9rem;
     }
   }
 }
+
 //loading页面
 .loadingBox {
   .a;
   background-color: rgb(36, 62, 111);
+
   .progress {
     position: relative;
     width: 5.4rem;
     height: 5.4rem;
-    background: linear-gradient(-45deg, #855eee 30%, #187cea 50%, #48f1df 90%);
     border-radius: 50%;
     left: 50%;
     margin-left: -2.7rem;
     margin-top: 30%;
+    background: linear-gradient(-45deg, #855eee 30%, #187cea 50%, #48f1df 90%);
+
     img {
-      position: absolute;
-      width: 5rem;
       height: 5rem;
-      border-radius: 50%;
       left: 50%;
       margin-left: -2.6rem;
       margin-top: 0.1rem;
       border: 0.1rem solid #fff;
+      border-radius: 50%;
     }
   }
+
   .progressBox {
     position: absolute;
     width: 8rem;
@@ -79,13 +88,12 @@ body {
     margin-left: -4rem;
     background: #fff;
     border-radius: 0.2rem;
-    overflow: hidden;
+
     .progressBar {
       width: 0;
-      transition: width 1s;
       height: 0.4rem;
-      background: linear-gradient(
-        -45deg,
+      border-radius: 0.2rem;
+      background: linear-gradient(-45deg,
         #855eee 0%,
         #855eee 16.67%,
         #187cea 16.67%,
@@ -97,19 +105,21 @@ body {
         #187cea 66.67%,
         #187cea 83.34%,
         #48f1df 83.34%,
-        #48f1df 100%
-      );
+        #48f1df 100%);
       background-size: 0.4rem 0.4rem;
     }
   }
 }
+
 // 第一页
 .page_one {
   .a;
   background-color: rgb(36, 62, 111);
+
   .one_circle {
     .circle;
     position: relative;
+
     .one_user_j {
       position: absolute;
       height: 5.5rem;
@@ -122,6 +132,7 @@ body {
       background: url('@{img}page_user1.png') no-repeat;
       background-size: cover;
     }
+
     .one_user_e {
       position: absolute;
       width: 4rem;
@@ -135,6 +146,7 @@ body {
       background-size: cover;
     }
   }
+
   .one_bottom {
     position: absolute;
     width: 2.32rem;
@@ -145,6 +157,7 @@ body {
     border-left: 0.06rem solid rgb(230, 225, 225);
     border-right: 0.06rem solid rgb(230, 225, 225);
     opacity: 0;
+
     .one_mid {
       position: absolute;
       height: 100%;
@@ -162,9 +175,11 @@ body {
     }
   }
 }
+
 // 第二页
 .page_two {
   .a;
+
   .two_left {
     position: absolute;
     left: -2.9rem;
@@ -173,68 +188,83 @@ body {
     background: url('@{img}left.jpg') no-repeat;
     background-size: cover;
     opacity: 0;
+
     .mask {
       background-color: rgba(255, 255, 255, 0.3);
       .a;
     }
   }
+
   .two_head {
     width: 2.6rem;
     height: 2.6rem;
     border-radius: 50%;
     position: absolute;
-    left: 1.4rem;
+    left: 11%;
     top: 7%;
     background: url('@{img}head.jpg') no-repeat;
     background-size: cover;
     opacity: 0;
   }
+
   .top_title {
     .t;
   }
+
   .msg {
-    position: absolute;
-    bottom: 5%;
+    position: relative;
+    top: 25%;
+    height: 70%;
+    width: 75%;
+    left: 25%;
+
     .pic {
       position: absolute;
-      bottom: 1.2rem;
-      opacity: 0;
+      height: 100%;
+      left: -5%;
+
       li {
-        left: 2rem;
         width: 1rem;
-        height: 1rem;
-        margin: 0.55rem 0.35rem;
+        height: 14.3%;
+        opacity: 0;
+
         img {
           .a;
+          height: 1rem;
         }
       }
     }
+
     .desc {
       position: absolute;
-      bottom: 1.2rem;
-      opacity: 0;
+      height: 100%;
+      width: 70%;
+      right: -65%;
+
       li {
-        left: 10rem;
         color: rgb(36, 62, 111);
-        height: 1rem;
-        margin: 0.55rem 0.35rem;
-        line-height: 1rem;
+        height: 14.3%;
+        line-height: 2;
         font-size: 0.5rem;
         font-weight: initial;
+        opacity: 0;
       }
     }
   }
 }
+
 // 第三页
 .page_three {
   .a;
   background: url('@{img}bg.jpg') no-repeat;
   background-size: cover;
+
   .three_circle {
     .circle;
     opacity: 1;
     top: 25%;
     transform: scale(0.1);
+
     .job {
       width: 5.4rem;
       height: 1.7rem;
@@ -249,6 +279,7 @@ body {
       opacity: 0;
       transform: scale(0.1);
     }
+
     .post {
       position: absolute;
       width: 5.4rem;
@@ -263,37 +294,42 @@ body {
     }
   }
 }
+
 // 第四页
 .page_four {
   .a;
   color: #fff;
   background-color: rgb(36, 62, 111);
+
   .four_up {
     position: absolute;
-    top: 4.6rem;
+    top: 26.3%;
     left: 50%;
-    margin-left: -0.5rem;
+    margin-left: -0.7rem;
     z-index: 10;
     border-color: transparent transparent rgb(36, 62, 111) transparent;
-    border-width: 0.5rem;
+    border-width: 0.7rem;
     border-style: solid;
     opacity: 0;
   }
+
   .four_bg {
     background: url('@{img}bg2.jpg');
     background-size: cover;
     width: 100%;
-    height: 5.6rem;
+    height: 31.8%;
     position: absolute;
     top: 0;
     opacity: 0;
   }
+
   .title {
     .title;
   }
+
   .four_desc {
     width: 80%;
-    bottom: -25%;
+    top: 85%;
     position: absolute;
     left: 10%;
     text-align: left;
@@ -302,79 +338,84 @@ body {
     line-height: 0.6rem;
   }
 }
+
 // 第五页
 .page_five {
   .a;
   background-color: rgb(36, 62, 111);
+
   .top_title {
     .t;
   }
+
   .five_left {
     position: relative;
-    top: 0.9rem;
     left: 0.7rem;
     height: 80%;
     float: left;
+
     .five_left_line {
       position: absolute;
       background-color: rgb(222, 82, 91);
       width: 0.07rem;
-      height: 95%;
-      top: -12rem;
-    }
-    .five_left_circle {
+      height: 85%;
       opacity: 0;
-      position: relative;
-      top: 0.1rem;
+      top: -65%;
+    }
+
+    .five_left_circle {
+      // opacity: 0;
+      position: absolute;
+      top: 7%;
       left: -0.17rem;
-      height: 80%;
+      height: 100%;
+
       li {
-        position: absolute;
-        height: 0.45rem;
-        width: 0.45rem;
-        background-color: rgb(222, 82, 91);
-        border-radius: 50%;
-        margin-bottom: 3rem;
+        opacity: 0;
+        transform:  scale(0.1);
+        height: 24%;
+        .five_circle{
+          height: 0.45rem;
+          width: 0.45rem;
+          background-color: rgb(222, 82, 91);
+          border-radius: 50%;
+        }
       }
     }
   }
+
   .five_desc {
     position: relative;
-    top: 0.9rem;
     left: 1.2rem;
-    opacity: 0;
-    width: 75%;
+    width: 70%;
     height: 80%;
+    top: 5%;
+
     li {
-      position: absolute;
-      overflow: hidden;
+      opacity: 0;
+      height: 24%;
+      left: 5rem;
+      transform:  scale(0.1);
       .five_time {
         color: #fff;
         font-size: 0.5rem;
         font-weight: 200;
-        margin-top: 0.5rem;
       }
+
       .five_content {
         color: rgb(130, 195, 233);
         font-size: 0.33rem;
         font-weight: 100;
         margin-top: 0.2rem;
-        width: 93%;
+        display: -webkit-box; /* 弹性盒模型*/
+        -webkit-box-orient: vertical; /* 文字垂直排列 */
+        -webkit-line-clamp:4; /*文字显示的行数*/
+        overflow: hidden; /*超出部分溢出隐藏*/
       }
-      &:nth-child(1) {
-        top: 0;
-      }
-      &:nth-child(2) {
-        top: 21%;
-      }
-      &:nth-child(3) {
-        top: 42%;
-      }
-      &:nth-child(4) {
-        top: 63%;
-      }
+
     }
   }
+
   .five_bg {
     position: absolute;
     left: 0.7rem;
@@ -382,6 +423,7 @@ body {
     width: 9rem;
     height: 2.5rem;
     opacity: 0;
+
     .ruler {
       width: 0.6rem;
       height: 2rem;
@@ -391,6 +433,7 @@ body {
       background: url('@{img}ruler.png') no-repeat;
       background-size: cover;
     }
+
     .em {
       width: 0.8rem;
       height: 1.3rem;
@@ -401,6 +444,7 @@ body {
       background: url('@{img}em.png') no-repeat;
       background-size: cover;
     }
+
     .phone {
       width: 1rem;
       height: 1.5rem;
@@ -411,6 +455,7 @@ body {
       background: url('@{img}iphone.png') no-repeat;
       background-size: cover;
     }
+
     .computer {
       width: 4.2rem;
       height: 2.5rem;
@@ -421,6 +466,7 @@ body {
       background: url('@{img}computer.png') no-repeat;
       background-size: cover;
     }
+
     .memo {
       width: 1.5rem;
       height: 1.7rem;
@@ -431,6 +477,7 @@ body {
       background: url('@{img}memo.png') no-repeat;
       background-size: cover;
     }
+
     .key {
       width: 0.9rem;
       height: 1.4rem;
@@ -443,163 +490,176 @@ body {
     }
   }
 }
+
 // 第六页
 .page_six {
   .a;
   position: relative;
+
   .six_bg {
-    height: 3.2rem;
+    height: 20%;
     width: 100%;
     background: url('@{img}bg3.jpg');
     background-size: cover;
     opacity: 0;
   }
+
   .title {
     .title;
-    top: -102%;
+    top: -103%;
   }
+
   .six_bottom {
     .a;
     background-color: rgb(36, 62, 111);
-    ul {
-      height: 5rem;
-      width: 8rem;
-      color: #fff;
-      font-size: 0.6rem;
-      text-align: center;
-      line-height: 1.3rem;
-      font-weight: 100;
+
+    .six_bt {
       position: absolute;
-      top: 1.4rem;
-      left: 1.2rem;
-      height: 10%;
-      li {
-        height: 1.3rem;
-        width: 8rem;
-        padding-bottom: 0.5rem;
-        &:nth-child(1) {
-          top: 0;
-        }
-        &:nth-child(2) {
-          top: 21%;
-        }
-        &:nth-child(3) {
-          top: 42%;
-        }
-        &:nth-child(4) {
-          top: 63%;
-        }
-        &:nth-child(5) {
-          top: 84%;
-        }
+      // background-color: #855eee;
+      width: 80%;
+      height: 60%;
+      top: 6%;
+      left: 10%;
+
+      .six_lf {
+        // background-color: #000;
+        height: 100%;
+        width: 1.5rem;
+        position: absolute;
+        left: 0;
+
         .six_left {
           opacity: 0;
           transform: scale(0.1);
-          float: left;
           width: 1.3rem;
           height: 1.3rem;
           border-radius: 50%;
+          margin: 25% 0;
+          float: left;
+          left: -1rem;
           .left_circle {
             width: 1.2rem;
             height: 1.2rem;
             border-radius: 50%;
             margin: 0.05rem auto;
+            text-align: center;
+            line-height: 1.2rem;
+          }
+
+          &:nth-child(1) {
+            border: 0.02rem solid rgb(105, 206, 245);
+
+            .left_circle {
+              background-color: rgb(0, 98, 184);
+            }
+          }
+
+          &:nth-child(2) {
+            border: 0.02rem solid rgb(221, 178, 8);
+
+            .left_circle {
+              background-color: rgb(249, 127, 45);
+            }
+          }
+
+          &:nth-child(3) {
+            border: 0.02rem solid rgb(211, 255, 162);
+
+            .left_circle {
+              background-color: rgb(126, 211, 33);
+            }
+          }
+
+          &:nth-child(4) {
+            border: 0.02rem solid rgb(240, 116, 172);
+
+            .left_circle {
+              background-color: rgb(244, 20, 132);
+            }
+          }
+
+          &:nth-child(5) {
+            border: 0.02rem solid rgb(252, 83, 43);
+
+            .left_circle {
+              background-color: rgb(224, 30, 54);
+            }
+
           }
         }
+      }
+
+      .six_rt {
+        height: 100%;
+        width: 80%;
+        right: 0;
+        position: absolute;
+        float: left;
         .six_right {
           opacity: 0;
           transform: scale(0.1);
-          position: relative;
-          float: left;
           height: 0.3rem;
-          width: 5.6rem;
+          width: 90%;
           background-color: #ccc;
-          margin: 0.5rem 0.3rem;
+          margin-left: 5%;
+          float: left;
+          margin: 14% 5%;
+          left:5rem;
           .right_color {
             width: 0.3rem;
             height: 0.3rem;
           }
-        }
-        &:nth-child(1) {
-          .six_left {
-            border: 0.02rem solid rgb(105, 206, 245);
-            .left_circle {
-              background-color: rgb(0, 98, 184);
-            }
-          }
-          .six_right {
+
+          &:nth-child(1) {
             .right_color {
               background-color: rgb(0, 98, 184);
-              left: 3rem;
+              left: 70%;
             }
           }
-        }
-        &:nth-child(2) {
-          .six_left {
-            border: 0.02rem solid rgb(221, 178, 8);
-            .left_circle {
-              background-color: rgb(249, 127, 45);
-            }
-          }
-          .six_right {
+
+          &:nth-child(2) {
             .right_color {
               background-color: rgb(249, 127, 45);
-              left: 3.2rem;
+              left: 80%;
             }
           }
-        }
-        &:nth-child(3) {
-          .six_left {
-            border: 0.02rem solid rgb(211, 255, 162);
-            .left_circle {
-              background-color: rgb(126, 211, 33);
-            }
-          }
-          .six_right {
+
+          &:nth-child(3) {
             .right_color {
               background-color: rgb(126, 211, 33);
-              left: 3.2rem;
+              left: 75%;
             }
           }
-        }
-        &:nth-child(4) {
-          .six_left {
-            border: 0.02rem solid rgb(240, 116, 172);
-            .left_circle {
-              background-color: rgb(244, 20, 132);
-            }
-          }
-          .six_right {
+
+          &:nth-child(4) {
             .right_color {
               background-color: rgb(244, 20, 132);
-              left: 3.3rem;
+              left: 85%;
             }
           }
-        }
-        &:nth-child(5) {
-          .six_left {
-            border: 0.02rem solid rgb(252, 83, 43);
-            .left_circle {
-              background-color: rgb(224, 30, 54);
-            }
-          }
-          .six_right {
+
+          &:nth-child(5) {
             .right_color {
               background-color: rgb(224, 30, 54);
-              left: 3.2rem;
+              left: 60%;
             }
           }
+
         }
+
+
       }
     }
   }
+
   .six_bgb {
     position: relative;
     left: 0.7rem;
-    bottom: 4.4rem;
+    bottom: 25%;
     width: 8.5rem;
     height: 2.5rem;
     opacity: 0;
+
     .one {
       width: 1.4rem;
       height: 1.5rem;
@@ -609,6 +669,7 @@ body {
       background: url('@{img}@.png') no-repeat;
       background-size: cover;
     }
+
     .two {
       width: 1.3rem;
       height: 1.2rem;
@@ -619,6 +680,7 @@ body {
       background: url('@{img}upp.png') no-repeat;
       background-size: cover;
     }
+
     .three {
       width: 1.3rem;
       height: 1rem;
@@ -629,6 +691,7 @@ body {
       background: url('@{img}a8a55c60951fbfb99c26f27ae618037b.png') no-repeat;
       background-size: cover;
     }
+
     .four {
       width: 1.5rem;
       height: 1.5rem;
@@ -641,30 +704,11 @@ body {
     }
   }
 }
+
 // 第七页
 .page_seven {
   .a;
   background-color: rgb(36, 62, 111);
-  .seven_tab {
-    opacity: 0;
-    transform: scale(0.1);
-    width: 5.3rem;
-    height: 3.6rem;
-    position: relative;
-    top: 5%;
-    left: 0.2rem;
-    background: url('@{img}tab.png');
-    background-size: cover;
-    span {
-      position: absolute;
-      color: #000;
-      font-size: 0.45rem;
-      left: 1.8rem;
-      top: 1.7rem;
-      transform: rotate(-25deg);
-      opacity: 0;
-    }
-  }
   .seven_desc {
     opacity: 0;
     position: absolute;
@@ -674,9 +718,11 @@ body {
     margin-left: -1.8rem;
     color: #fff;
     font-size: 0.4rem;
+
     .seven_phone {
       margin-bottom: 0.5rem;
     }
+
     .seven_wechat {
       background: url('@{img}wechat2.png');
       background-size: cover;
@@ -687,6 +733,7 @@ body {
       left: 0.2rem;
     }
   }
+
   .seven_circle {
     opacity: 0;
     transform: scale(0.1);
@@ -694,11 +741,33 @@ body {
     height: 9.2rem;
     border-radius: 50%;
     border: 0.02rem dashed #fff;
-    position: absolute;
+    position: relative;
     top: 15%;
     left: 50%;
     margin-left: -4.6rem;
+    .seven_tab {
+      opacity: 0;
+      transform: scale(0.1);
+      width: 5.3rem;
+      height: 3.6rem;
+      position: relative;
+      top: -15%;
+      left: -5%;
+      background: url('@{img}tab.png');
+      background-size: cover;
+  
+      span {
+        position: absolute;
+        color: #000;
+        font-size: 0.45rem;
+        left: 1.8rem;
+        top: 1.7rem;
+        transform: rotate(-25deg);
+        opacity: 0;
+      }
+    }
   }
+
   .seven_hand {
     opacity: 0;
     background: url('@{img}hand.png');

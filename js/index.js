@@ -83,7 +83,6 @@ function music() {
   }
 }
 
-
 // 第一页
 function pageOne() {
   $pageTwo.css({
@@ -98,88 +97,71 @@ function pageOne() {
     opacity: 1,
     transition: 'all 2s'
   })
-  let timer1 = setTimeout(() => {
-    clearTimeout(timer1);
-    $userJ.css({
-      transform: 'translateY(3rem)',
-      transition: 'all 1s',
-      opacity: 1
-    })
-    $userE.css({
-      transform: 'translateX(2rem)',
-      transition: 'all 2s',
-      opacity: 1
-    })
-  }, 1000);
-  let timer2 = setTimeout(() => {
-    clearTimeout(timer2)
-    $bottom.css({
-      transform: 'translateY(3rem)',
-      transition: 'all 2s',
-      opacity: 1
-    })
-    $mid.css({
-      transform: 'translateY(3rem)',
-      transition: 'all 3s',
-      opacity: 1
-    })
-  }, 2000);
+  $userJ.css({
+    transform: 'translateY(3rem)',
+    transition: 'all 1s 1s',
+    opacity: 1
+  })
+  $userE.css({
+    transform: 'translateX(2rem)',
+    transition: 'all 2s 1s',
+    opacity: 1
+  })
+  $bottom.css({
+    transform: 'translateY(3rem)',
+    transition: 'all 2s ease-in-out 2s',
+    opacity: 1
+  })
+  $mid.css({
+    transform: 'translateY(3rem)',
+    transition: 'all 3s ease-in-out 2s',
+    opacity: 1
+  })
   $up.tap(function () {
-    $pageOne.css({
-      display: 'none',
-    })
+    $pageOne.hide();
     pageTwo()
   })
 }
-// 第二页
+// 第二页 
 function pageTwo() {
   let $twoLeft = $pageTwo.children('.two_left'),
     $twoHead = $pageTwo.children('.two_head'),
     $pic = $pageTwo.find('.pic'),
-    $desc = $pageTwo.find('.desc');
+    $picLi = $pic.children('li'),
+    $desc = $pageTwo.find('.desc'),
+    $descLi = $desc.children('li');
   topTitle();
-  twoLeft();
-  twoHead();
-  Ul();
 
-  function twoLeft() {
-    let timer = setTimeout(() => {
-      clearTimeout(timer)
-      $twoLeft.css({
-        transform: 'translateX(2.9rem)',
-        opacity: '1',
-        transition: 'all 1.5s',
-      })
-    }, 1000);
-  }
+  $twoLeft.css({
+    transform: 'translateX(2.9rem)',
+    opacity: '1',
+    transition: 'all 1.5s 1s',
+  })
 
-  function twoHead() {
-    let timer = setTimeout(() => {
-      clearTimeout(timer)
-      $twoHead.css({
-        transform: 'rotate(360deg)',
-        transition: 'all 2s',
-        opacity: 1
-      })
-    }, 1000);
-  }
+  $twoHead.css({
+    transform: 'rotate(360deg)',
+    transition: 'all 2s 1s',
+    opacity: 1
+  })
 
-  function Ul() {
+  let timer = setTimeout(() => {
+    clearTimeout(timer)
+    for (let i = 0; i < $picLi.length; i++) {
+      setTimeout(function () {
+        $picLi.eq(i).css({
+          transform: 'translateX(1rem)',
+          transition: 'all 1s ease-in-out ',
+          opacity: 1
+        })
+        $descLi.eq(i).css({
+          transform: 'translateX(-5rem)',
+          transition: 'all 1s ease-in-out',
+          opacity: 1
+        })
+      }, i * 800);
+    }
+  }, 1000);
 
-    let timer = setTimeout(() => {
-      clearTimeout(timer)
-      $pic.css({
-        transform: 'translateX(1rem)',
-        transition: 'all 2s',
-        opacity: 1
-      })
-      $desc.css({
-        transform: 'translateX(-5rem)',
-        transition: 'all 2s',
-        opacity: 1
-      })
-    }, 1000);
-  }
   $up.tap(function () {
     $pageTwo.css({
       display: 'none',
@@ -227,25 +209,16 @@ function pageFour() {
     opacity: 1,
     transition: 'all 1s'
   })
-  fourUp()
   title()
-  fourDesc()
+  $fourUp.css({
+    opacity: 1,
+    transition: 'all 2s 0.7s'
+  })
 
-  function fourUp() {
-    let timer = setTimeout(() => {
-      $fourUp.css({
-        opacity: 1,
-        transition: 'all 2s'
-      })
-    }, 700);
-  }
-
-  function fourDesc() {
-    $fourDesc.css({
-      transform: 'translateY(-7rem)',
-      transition: 'all 2s'
-    })
-  }
+  $fourDesc.css({
+    transform: 'translateY(-7rem)',
+    transition: 'all 2s'
+  })
   $up.tap(function () {
     $pageFour.css({
       display: 'none',
@@ -255,36 +228,36 @@ function pageFour() {
   })
 }
 // 第五页
+
 function pageFive() {
-  //  $fiveLeftLine = $('.five_left_line'),
-  // $fiveLeftCircle = $('.five_left_circle'),
-  let $fiveDesc = $('.five_desc');
-  // $fiveLeftLine.css({
-  //   transform: 'translateY(12rem)',
-  //   transition: 'all 2s'
-  // })
+  let $fiveLeftLine = $('.five_left_line'),
+    $fiveLeftCircle = $('.five_left_circle'),
+    $fiveLeftCircleLi = $fiveLeftCircle.children('li'),
+    $fiveDesc = $('.five_desc'),
+    $fiveDescLi = $fiveDesc.children('li')
   topTitle();
-  // fiveLeftCircle();
-  fiveDesc()
   bottomBg()
 
-  // function fiveLeftCircle() {
-  //   let timer = setTimeout(() => {
-  //     $fiveLeftCircle.css({
-  //       opacity: 1,
-  //       transition: 'all 2s'
-  //     })
-  //   }, 2000);
-  // }
-
-  function fiveDesc() {
-    let timer = setTimeout(() => {
-      $fiveDesc.css({
-        opacity: 1,
-        transition: 'all 2s'
+  $fiveLeftLine.css({
+    transform: 'translateY(10rem) scale(1)',
+    transition: 'all 2s',
+    opacity: 1
+  })
+  for (let i = 0; i < $fiveDescLi.length; i++) {
+    setTimeout(function () {
+      $fiveLeftCircleLi.eq(i).css({
+        transform: 'scale(1)',
+        transition: 'all 1s',
+        opacity: 1
       })
-    }, 1000);
+      $fiveDescLi.eq(i).css({
+        transform: 'translateX(-5rem) scale(1)',
+        transition: 'all 3s ease-in-out',
+        opacity: 1
+      })
+    }, i * 800);
   }
+
   $up.tap(function () {
     $pageFive.css({
       display: 'none',
@@ -297,30 +270,34 @@ function pageFive() {
 function pageSix() {
   let $sixBg = $pageSix.children('.six_bg'),
     $sixBottom = $pageSix.children('.six_bottom'),
-    $sixLeft = $pageSix.find('.six_left'),
-    $sixRight = $pageSix.find('.six_right');
+    $sixLf = $pageSix.find('.six_lf'),
+    $sixLeft = $sixLf.children('.six_left'),
+    $sixRt = $pageSix.find('.six_rt'),
+    $sixRight = $sixRt.children('.six_right');
+
   $sixBg.css({
     opacity: 1,
     transition: 'all 1s'
   })
   title()
-  sixBottom()
   bottomBg()
-
-  function sixBottom() {
-    let timer = setTimeout(() => {
-      $sixRight.css({
-        opacity: 1,
-        transform: 'scale(1)',
-        transition: 'all 4s'
-      })
-      $sixLeft.css({
-        transform: 'scale(1)',
-        opacity: 1,
-        transition: 'all 2s'
-      })
-    }, 1000);
-  }
+  let timer = setTimeout(() => {
+    clearTimeout(timer)
+    for (let i = 0; i < $sixLeft.length; i++) {
+      setTimeout(function () {
+        $sixLeft.eq(i).css({
+          transform: 'translateX(1rem) scale(1)',
+          transition: 'all 1s ease-in-out ',
+          opacity: 1
+        })
+        $sixRight.eq(i).css({
+          transform: 'translateX(-5rem) scale(1)',
+          transition: 'all 2s ease-in-out',
+          opacity: 1
+        })
+      }, i * 800);
+    }
+  }, 1000);
   $up.tap(function () {
     $pageSix.css({
       display: 'none',
@@ -331,7 +308,7 @@ function pageSix() {
 // 第七页
 function pageSeven() {
   let $sevenCircle = $pageSeven.children('.seven_circle'),
-    $sevenTab = $pageSeven.children('.seven_tab'),
+    $sevenTab = $pageSeven.find('.seven_tab'),
     $sevenS = $sevenTab.children('span'),
     $sevenDesc = $pageSeven.children('.seven_desc'),
     $sevenHand = $pageSeven.children('.seven_hand');
